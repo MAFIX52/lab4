@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    char station;
+
+    
+    cout << "Введите букву станции (A, B, C, D, E): ";
+    cin >> station;
+
+    
+    station = toupper(station);
+
+    switch (station) {
+    case 'A':
+    case'a':
+        
+        cout << "До станции A осталось 20 минут!" << endl;
+        break;
+    case 'B':
+    case 'b':
+        cout << "До станции B осталось 40 минут!" << endl;
+        
+        break;
+    case 'C':
+    case'c':
+        cout << "До станции C остался 1 час!" << endl;
+        
+        break;
+    case 'D':
+    case'd':
+        cout << "До станции D остался 1 час и 20 минут!" << endl;
+        
+        break;
+    case 'E':
+    case 'e':
+        cout << "до станции E остался 1 час и 40 минут!" << endl;
+        
+        break;
+    default:
+        cout << "Некорректный ввод. Пожалуйста, выберите одну из букв (A, B, C, D, E)." << endl;
+        break;
+    }
+
+    return 0;
+}

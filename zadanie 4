@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    setlocale(0, "");
+    // Коэффициенты квадратного уравнения
+    double a = 3.0;
+    double b = -4.0;
+    double c = 9.0;
+
+    // Вычисление дискриминанта
+    double discriminant = b * b - 4 * a * c;
+
+    // Проверка значения дискриминанта
+    if (discriminant > 0) {
+        // Два вещественных корня
+        double root1 = (-b + sqrt(discriminant)) / (2 * a);
+        double root2 = (-b - sqrt(discriminant)) / (2 * a);
+        cout << "У уравнения есть два корня:" << endl;
+        cout << "Корень 1: " << root1 << endl;
+        cout << "Корень 2: " << root2 << endl;
+    }
+    else if (discriminant == 0) {
+        // Один вещественный корень
+        double root = -b / (2 * a);
+        cout << "У уравнения есть один корень:" << endl;
+        cout << "Корень: " << root << endl;
+    }
+    else {
+        // Нет вещественных корней
+        cout << "У уравнения нет вещественных корней." << endl;
+    }
+
+    return 0;
+}
